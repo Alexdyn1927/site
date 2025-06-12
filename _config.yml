@@ -1,33 +1,26 @@
-baseurl: "/" # The subpath of your site. Use "" if you're hosting a blog at the root level.
-url: "http://ellekasai.github.io" # the base hostname & protocol for your site
-title: "Co-Lab"
+title: Your Blog Name
+description: Your blog description
 
-# This is used by feed.xml. Uncomment if you want to use it.
-# description: "..."
-
-gems:
-  - jemoji
-exclude:
-  - "README.md"
-  - "CHANGELOG.md"
-  - "CNAME"
-  - "Gemfile"
-  - "Gemfile.lock"
-permalink: :title
+# Default Author Configuration
 defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      author:
+        name: "Site Default Author"
+        bio: "Default author bio"
+        avatar: "/assets/images/default-avatar.jpg"
 
-# Excerpt settings
-excerpt_separator: <!--more-->
-show_excerpts: true
+# Optional: Additional author-related configurations
+authors:
+  # You can define multiple authors here
+  john_doe:
+    name: "John Doe"
+    bio: "Experienced software developer"
+    avatar: "/assets/images/authors/john-doe.jpg"
+  jane_smith:
+    name: "Jane Smith"
+    bio: "Technical writer and engineer"
+    avatar: "/assets/images/authors/jane-smith.jpg"
