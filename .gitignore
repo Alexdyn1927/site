@@ -1,3 +1,42 @@
-_site
-.sass-cache
-Gemfile.lock
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Development environments
+.env
+.venv
+venv/
+ENV/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
