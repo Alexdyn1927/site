@@ -1,5 +1,5 @@
 import os
-import yaml
+import re
 import unittest
 from update_post_authors import update_post_frontmatter
 
@@ -22,13 +22,14 @@ Test content''')
         with open(self.test_file, 'r') as f:
             content = f.read()
         
-        # Split front matter
-        front_matter = content.split('---')[1].strip()
-        parsed_front_matter = yaml.safe_load(f"---\n{front_matter}\n---")
+        # Use regex to parse front matter
+        front_matter_match = re.match(r'^---\n(.*?\n)---', content, re.DOTALL)
+        self.assertIsNotNone(front_matter_match)
+        
+        front_matter = front_matter_match.group(1)
         
         # Check author is added
-        self.assertIn('author', parsed_front_matter)
-        self.assertEqual(parsed_front_matter['author'], 'Anonymous')
+        self.assertIn('author: Anonymous', front_matter)
     
     def tearDown(self):
         # Remove test file
