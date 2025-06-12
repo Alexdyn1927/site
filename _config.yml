@@ -2,6 +2,12 @@ baseurl: "/" # The subpath of your site. Use "" if you're hosting a blog at the 
 url: "http://ellekasai.github.io" # the base hostname & protocol for your site
 title: "Co-Lab"
 
+# Author configuration
+author:
+  name: "Anonymous"
+  bio: "Default site author"
+  avatar: "/images/default-avatar.jpg"
+
 # This is used by feed.xml. Uncomment if you want to use it.
 # description: "..."
 
@@ -27,7 +33,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: "Anonymous"
 
 # Excerpt settings
-excerpt_separator: <!--more-->
+excerpt_separator: <!--more-->"
 show_excerpts: true
